@@ -27,6 +27,29 @@ const posts = defineCollection({
   },
 });
 
+const changelogs = defineCollection({
+  name: "changelogs",
+  directory: "src/content/changelogs",
+  include: "**/*.mdx",
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    published: z.coerce.date(),
+    content: z.string(),
+  }),
+  transform: async (document, context) => {
+    const mdx = await compileMDX(context, document, {
+      rehypePlugins: [rehypeSlug],
+    });
+    const html = await compileMarkdown(context, document);
+    return {
+      ...document,
+      mdx,
+      html,
+    };
+  },
+});
+
 export default defineConfig({
-  content: [posts],
+  content: [posts, changelogs],
 });

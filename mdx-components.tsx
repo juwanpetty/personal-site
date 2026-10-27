@@ -35,7 +35,7 @@ export const components: MDXComponents = {
 
     if (isExternal) {
       return (
-        <a href={href} {...props}>
+        <a href={href} target="_blank" rel="noopener noreferrer" {...props}>
           {children}
         </a>
       );

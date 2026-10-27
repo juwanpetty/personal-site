@@ -143,7 +143,7 @@
   /* Base */
   color: var(--tw-prose-body);
   font-size: var(--text-base);
-  line-height: var(--leading-relaxed);
+  line-height: 1.75;
 }
 
 .prose :not(:where([class~="not-prose"], [class~="not-prose"] *)) {
@@ -151,7 +151,8 @@
   &:where(p) {
     margin-top: calc(0);
     margin-bottom: calc(var(--spacing) * 6.5);
-    line-height: var(--leading-relaxed);
+    /* line-height: var(--leading-relaxed); */
+    line-height: 1.75;
   }
 
   &:where([class~="lead"]) {

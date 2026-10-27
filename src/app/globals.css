@@ -29,3 +29,11 @@
 *::after {
   box-sizing: border-box;
 }
+
+.vinyl-disc {
+  background: repeating-radial-gradient(
+    circle at center,
+    #0d0d0d 0 5px,
+    #161616 5px 6px
+  );
+}

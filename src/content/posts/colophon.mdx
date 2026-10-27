@@ -1,0 +1,19 @@
+---
+title: "Colophon"
+published: 2026-08-09
+description: "About this site and how it's made."
+---
+
+Just like life itself, this website is and will always be a work in progress. As I continue to add new content, improve the user experience, and tweak this site, this post will outline what technologies I’m using and how different features work.
+
+If there is anything I haven’t expanded on or you have questions on something I didn’t cover, feel free to reach out to me on [Threads](https://www.threads.com/@juwanpetty) where I also share updates or by [email](mailto:jchpetty@gmail.com).
+
+## Technologies
+This website is built with [Next.js](https://nextjs.org/) and hosted on [Vercel](https://vercel.com/home). Everything is styled with [TailwindCSS](https://tailwindcss.com/) (and some custom CSS) and uses a set of color variables from Radix UI’s color system. To merge Radix UI’s color system into my TailwindCSS configuration I use the [radix-colors-tailwind](https://www.npmjs.com/package/radix-colors-tailwind) plugin which — among many other things — handles dark mode automatically without having to use the `dark:` variant on elements.
+
+The content on my website is written in [MDX](https://mdxjs.com/) and processed with [Content Collections](https://www.content-collections.dev/) and [Zod](https://zod.dev/) for an extra layer of type-safety. This site is only a blog right now and using Content Collections makes it easy to set up and add posts.
+
+## Icons and typography
+The icons used across the site are from [Nucleo Icons](https://nucleoapp.com/) with some icons from [Lucide](https://lucide.dev/) sprinkled in. For the past couple of years Nucleo Icons has been my favorite icon set to use and I reach for it anytime I work on a personal project.
+
+Right now, there’s only one font used on this website and that’s [Inter](https://rsms.me/inter/).

@@ -1,4 +1,4 @@
-import { formatDate } from "@/features/blog/utils/date/date.utils";
+import { formatDate } from "@/utils/date";
 import { Post } from "content-collections";
 import Link from "next/link";
 
