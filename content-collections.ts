@@ -13,6 +13,7 @@ const articleSchema = z.object({
   title: z.string(),
   description: z.string(),
   published: z.coerce.date(),
+  draft: z.boolean().default(false),
   content: z.string(),
 });
 

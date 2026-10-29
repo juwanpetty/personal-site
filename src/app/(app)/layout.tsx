@@ -1,11 +1,10 @@
-export default function MainGroupLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+import { AppSidebar } from "@/components/app-sidebar";
+
+export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex min-h-screen flex-col">
-      <main className="flex-1">{children}</main>
+    <div className="flex min-h-screen">
+      <AppSidebar />
+      <div className="flex-1">{children}</div>
     </div>
   );
 }

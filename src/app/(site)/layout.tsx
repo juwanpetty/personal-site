@@ -1,6 +1,6 @@
 import { SiteHeader } from "@/components/site-header";
 
-export default function MainGroupLayout({
+export default function SiteLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -8,7 +8,7 @@ export default function MainGroupLayout({
   return (
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
-      <main className="flex-1">{children}</main>
+      <div className="flex-1">{children}</div>
     </div>
   );
 }
