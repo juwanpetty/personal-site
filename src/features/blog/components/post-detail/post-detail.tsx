@@ -1,7 +1,7 @@
 import { MDXContent } from "@content-collections/mdx/react";
 import type { Post } from "content-collections";
-import { components as mdxComponents } from "@/../mdx-components";
-import { formatDate } from "@/utils/date";
+import { components as mdxComponents } from "@/mdx-components";
+import { formatDate } from "@/utils/date.utils";
 
 type PostDetailProps = {
   post: Post;

@@ -1,5 +1,5 @@
 import { PostItem } from "@/features/blog/components/post-item/post-item";
-import { groupPostsByYear } from "@/features/blog/utils/group-posts-by-year/group-posts-by-year.utils";
+import { groupPostsByYear } from "@/features/blog/utils/group-posts-by-year.utils";
 import { Post } from "content-collections";
 
 type PostListProps = {
@@ -13,7 +13,7 @@ export function PostList({ posts }: PostListProps) {
     <div className="space-y-16 sm:space-y-24">
       {postsByYear.map(({ year, posts }, index) => (
         <section key={index}>
-          <h2 className="flex w-full items-center font-medium text-gray-12 mb-3">
+          <h2 className="text-gray-12 mb-3 flex w-full items-center font-medium">
             {year}
           </h2>
           <div className="flex flex-col gap-y-2">

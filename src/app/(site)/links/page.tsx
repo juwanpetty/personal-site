@@ -1,5 +1,6 @@
 "use client";
 
+import { PageContainer } from "@/components/page-container";
 import { useTailwindBreakpoint } from "@/hooks/use-tailwind-breakpoint";
 import { cn } from "@/lib/cn";
 import {
@@ -18,32 +19,32 @@ export default function Page() {
   const isMdBreakpoint = useTailwindBreakpoint("md");
 
   return (
-    <div className="mx-auto max-w-3xl px-0 sm:px-4">
+    <PageContainer>
       <header
         style={
           { "--avatar-size": "5rem", "--pt": "10rem" } as React.CSSProperties
         }
         className={cn(
-          "relative flex justify-center items-center isolate",
-          "px-4 sm:px-6 pb-8 pt-(--pt)",
+          "relative isolate flex items-center justify-center",
+          "px-4 pt-(--pt) pb-8 sm:px-6",
         )}
       >
         <section className="z-10 w-full space-y-4">
           <div className="flex items-end justify-between">
-            <div className="aspect-square rounded-full bg-gray-1 border border-gray-4 w-(--avatar-size)" />
+            <div className="bg-gray-1 border-gray-4 aspect-square w-(--avatar-size) rounded-full border" />
 
-            <div className="flex items-center gap-2 sm:gap-4 pb-2">
-              <button className="size-8 p-2 cursor-pointer rounded-full flex items-center justify-center">
+            <div className="flex items-center gap-2 pb-2 sm:gap-4">
+              <button className="flex size-8 cursor-pointer items-center justify-center rounded-full p-2">
                 <IconDotsOutline18 className="size-4" />
                 <span className="sr-only">Settings</span>
               </button>
 
-              <button className="size-8 p-2 cursor-pointer rounded-full flex items-center justify-center">
+              <button className="flex size-8 cursor-pointer items-center justify-center rounded-full p-2">
                 <IconMagnifierOutline18 className="size-4" />
                 <span className="sr-only">Search</span>
               </button>
 
-              <button className="h-8 px-2.5 py-1.5 cursor-pointer rounded-full bg-gray-12 text-white text-sm font-medium flex items-center gap-0.5">
+              <button className="bg-gray-12 flex h-8 cursor-pointer items-center gap-0.5 rounded-full px-2.5 py-1.5 text-sm font-medium text-white">
                 <span className="px-1">CTA Button</span>
               </button>
             </div>
@@ -61,7 +62,7 @@ export default function Page() {
         <div
           className={cn(
             "rounded-none",
-            "overflow-hidden absolute left-0 top-0 w-full z-0",
+            "absolute top-0 left-0 z-0 w-full overflow-hidden",
             "bg-gray-4 sm:rounded-2xl",
             "h-[calc(var(--pt)+var(--avatar-size)*0.33)]",
           )}
@@ -72,14 +73,14 @@ export default function Page() {
         <div className="space-y-16">
           <section className="flex w-full flex-col gap-4">
             <div className="flex items-center gap-x-2.5">
-              <div className="flex gap-x-2 items-center shrink-0">
-                <IconCircleUserFill18 className="size-5 text-gray-12" />
-                <h2 className="text-base font-[550] text-gray-12">About</h2>
+              <div className="flex shrink-0 items-center gap-x-2">
+                <IconCircleUserFill18 className="text-gray-12 size-5" />
+                <h2 className="text-gray-12 text-base font-[550]">About</h2>
               </div>
 
               <div
                 aria-hidden="true"
-                className="w-full border-t border-gray-6 border-dashed"
+                className="border-gray-6 w-full border-t border-dashed"
               />
             </div>
 
@@ -95,29 +96,29 @@ export default function Page() {
 
           <section className="flex w-full flex-col gap-4">
             <div className="flex items-center gap-x-2.5">
-              <div className="flex gap-x-2 items-center shrink-0">
-                <IconBookOpen5Fill18 className="size-5 text-gray-12" />
-                <h2 className="text-base font-[550] text-gray-12">
+              <div className="flex shrink-0 items-center gap-x-2">
+                <IconBookOpen5Fill18 className="text-gray-12 size-5" />
+                <h2 className="text-gray-12 text-base font-[550]">
                   Currently reading
                 </h2>
               </div>
 
               <div
                 aria-hidden="true"
-                className="w-full border-t border-gray-6 border-dashed"
+                className="border-gray-6 w-full border-t border-dashed"
               />
             </div>
 
             <div className="text-gray-11 max-w-3xl space-y-4 text-base/relaxed">
-              <div className="w-full rounded-2xl h-50">
-                <div className="h-50 flex gap-x-4">
-                  <div className="aspect-3/4 h-full bg-gray-1 rounded-lg relative">
+              <div className="h-50 w-full rounded-2xl">
+                <div className="flex h-50 gap-x-4">
+                  <div className="bg-gray-1 relative aspect-3/4 h-full rounded-lg">
                     <span className="absolute inset-0 h-full w-full object-cover" />
                     <div className="pointer-events-none absolute inset-0 rounded-lg inset-ring-1 inset-ring-black/10 dark:inset-ring-white/10" />
                   </div>
 
                   <div className="grow">
-                    <p className="text-base font-medium text-gray-12">
+                    <p className="text-gray-12 text-base font-medium">
                       In a Grove
                     </p>
                     <p className="text-sm">Ryūnosuke Akutagawa</p>
@@ -129,48 +130,48 @@ export default function Page() {
 
           <section className="flex w-full flex-col gap-4">
             <div className="flex items-center gap-x-2.5">
-              <div className="flex gap-x-2 items-center shrink-0">
-                <IconGamepadFill18 className="size-5 text-gray-12" />
-                <h2 className="text-base font-[550] text-gray-12">
+              <div className="flex shrink-0 items-center gap-x-2">
+                <IconGamepadFill18 className="text-gray-12 size-5" />
+                <h2 className="text-gray-12 text-base font-[550]">
                   Currently playing
                 </h2>
               </div>
 
               <div
                 aria-hidden="true"
-                className="w-full border-t border-gray-6 border-dashed"
+                className="border-gray-6 w-full border-t border-dashed"
               />
             </div>
 
             <div className="text-gray-11 max-w-3xl space-y-4 text-base/relaxed">
-              <div className="w-full rounded-2xl bg-gray-3 h-50" />
+              <div className="bg-gray-3 h-50 w-full rounded-2xl" />
             </div>
           </section>
 
           <section className="flex w-full flex-col gap-4">
             <div className="flex items-center gap-x-2.5">
-              <div className="flex gap-x-2 items-center shrink-0">
-                <IconHeadphonesFill18 className="size-5 text-gray-12" />
-                <h2 className="text-base font-[550] text-gray-12">
+              <div className="flex shrink-0 items-center gap-x-2">
+                <IconHeadphonesFill18 className="text-gray-12 size-5" />
+                <h2 className="text-gray-12 text-base font-[550]">
                   Currently listening to
                 </h2>
               </div>
 
               <div
                 aria-hidden="true"
-                className="w-full border-t border-gray-6 border-dashed"
+                className="border-gray-6 w-full border-t border-dashed"
               />
             </div>
 
             <div className="text-gray-11 max-w-3xl space-y-4 text-base/relaxed">
-              <div className="w-full rounded-2xl h-50 flex items-center">
+              <div className="flex h-50 w-full items-center rounded-2xl">
                 <VinylPlayer size={isMdBreakpoint ? 144 : 88} />
               </div>
             </div>
           </section>
         </div>
       </div>
-    </div>
+    </PageContainer>
   );
 }
 
@@ -185,25 +186,25 @@ interface VinylPlayerProps {
 
 function VinylPlayer({ size = 200, coverUrl = "" }: VinylPlayerProps) {
   return (
-    <div className="flex items-center w-full gap-x-4 pr-4">
+    <div className="flex w-full items-center gap-x-4 pr-4">
       <div className="w-44.5">
         <div
-          className="relative size-(--vinyl-size) isolate"
+          className="relative isolate size-(--vinyl-size)"
           style={{ "--vinyl-size": `${size}px` } as React.CSSProperties}
         >
           {/* Cover */}
-          <div className="absolute left-0 top-0 z-2 h-full w-full overflow-hidden rounded-lg bg-gray-1">
+          <div className="bg-gray-1 absolute top-0 left-0 z-2 h-full w-full overflow-hidden rounded-lg">
             <span className="absolute inset-0 h-full w-full object-cover" />
             <div className="pointer-events-none absolute inset-0 rounded-lg inset-ring-1 inset-ring-black/10 dark:inset-ring-white/10" />
           </div>
           {/* Vinyl Disc */}
-          <div className="absolute left-[33%] top-[5%] z-1 flex size-[90%] items-center">
+          <div className="absolute top-[5%] left-[33%] z-1 flex size-[90%] items-center">
             <div
               aria-hidden="true"
-              className="vinyl-disc absolute rounded-full flex items-center justify-center size-[calc(var(--vinyl-size)*0.9)]"
+              className="vinyl-disc absolute flex size-[calc(var(--vinyl-size)*0.9)] items-center justify-center rounded-full"
             >
               <div className="relative flex size-[36%] items-center justify-center overflow-hidden rounded-full">
-                <div className="absolute inset-0 h-full w-full object-cover bg-ruby-9" />
+                <div className="bg-ruby-9 absolute inset-0 h-full w-full object-cover" />
                 <span className="relative size-[7%] rounded-full bg-[#0d0d0d]" />
               </div>
             </div>
@@ -212,15 +213,15 @@ function VinylPlayer({ size = 200, coverUrl = "" }: VinylPlayerProps) {
       </div>
 
       <div className="grow">
-        <p className="text-base font-medium text-gray-12">
+        <p className="text-gray-12 text-base font-medium">
           A Really Long Song Title
         </p>
         <p className="text-sm">Artist</p>
       </div>
 
       <div>
-        <button className="bg-gray-3 size-10 rounded-full flex items-center justify-center cursor-pointer">
-          <IconMediaPlayFill18 className="size-4 text-gray-11" />
+        <button className="bg-gray-3 flex size-10 cursor-pointer items-center justify-center rounded-full">
+          <IconMediaPlayFill18 className="text-gray-11 size-4" />
         </button>
       </div>
     </div>

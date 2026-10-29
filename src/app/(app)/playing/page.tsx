@@ -1,3 +1,5 @@
+import { PageContainer } from "@/components/page-container";
+
 export default function Page() {
-  return <div>Playing Index</div>;
+  return <PageContainer>Playing Index</PageContainer>;
 }

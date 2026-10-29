@@ -1,3 +1,5 @@
+import { PageContainer } from "@/components/page-container";
+
 export default async function Page() {
-  return <div>Watching Detail Page</div>;
+  return <PageContainer>Watching Detail Page</PageContainer>;
 }

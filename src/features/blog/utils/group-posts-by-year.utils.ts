@@ -21,10 +21,10 @@ export function groupPostsByYear(posts: Post[]): PostsByYear[] {
     .map(([year, posts]) => {
       return {
         year: Number(year),
-        posts: [...posts].sort(
+        posts: [...posts].toSorted(
           (a, b) => b.published.getTime() - a.published.getTime(),
         ),
       };
     })
-    .sort((a, b) => b.year - a.year);
+    .toSorted((a, b) => b.year - a.year);
 }

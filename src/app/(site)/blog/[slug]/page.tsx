@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { PostDetail } from "@/features/blog/components/post-detail/post-detail";
 import { getPosts } from "@/features/blog/queries/get-posts";
 import { getPost } from "@/features/blog/queries/get-post";
+import { siteConfig } from "@/config/site";
 
 export async function generateStaticParams() {
   return getPosts().map((post) => ({
@@ -26,8 +27,8 @@ export async function generateMetadata({
     title: post.title,
     openGraph: {
       title: post.title,
-      url: `https://juwanpetty.com/blog/${slug}`,
-      siteName: "Juwan Petty",
+      url: `${siteConfig.url}/blog/${slug}`,
+      siteName: siteConfig.name,
       type: "article",
     },
   };

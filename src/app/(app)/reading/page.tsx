@@ -1,3 +1,11 @@
+import { AppHeader } from "@/components/app-header";
+import { PageContainer } from "@/components/page-container";
+
 export default function Page() {
-  return <div>Reading Index</div>;
+  return (
+    <div>
+      <AppHeader />
+      <PageContainer>Reading Index</PageContainer>
+    </div>
+  );
 }

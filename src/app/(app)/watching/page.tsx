@@ -1,3 +1,5 @@
+import { PageContainer } from "@/components/page-container";
+
 export default function Page() {
-  return <div>Reading Index</div>;
+  return <PageContainer>Reading Index</PageContainer>;
 }

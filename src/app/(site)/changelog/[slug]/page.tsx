@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import { ChangelogDetail } from "@/features/changelog/components/changelog-detail/changelog-detail";
 import { getChangelogs } from "@/features/changelog/queries/get-changelogs";
 import { getChangelog } from "@/features/changelog/queries/get-changelog";
+import { siteConfig } from "@/config/site";
 
 export async function generateStaticParams() {
   return getChangelogs().map((changelog) => ({
@@ -26,8 +27,8 @@ export async function generateMetadata({
     title: changelog.title,
     openGraph: {
       title: changelog.title,
-      url: `https://juwanpetty.com/changelog/${slug}`,
-      siteName: "Juwan Petty",
+      url: `${siteConfig.url}/changelog/${slug}`,
+      siteName: siteConfig.name,
       type: "article",
     },
   };
