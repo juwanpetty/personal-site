@@ -1,10 +1,11 @@
 import { PostList } from "@/features/blog/components/post-list/post-list";
 import { allPosts } from "content-collections";
+import { PageContainer } from "@/components/page-container";
 
 export default function HomePage() {
   return (
-    <div className="mx-auto max-w-2xl">
+    <PageContainer>
       <PostList posts={allPosts} />
-    </div>
+    </PageContainer>
   );
 }

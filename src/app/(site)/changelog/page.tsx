@@ -1,9 +1,10 @@
 import { ChangelogList } from "@/features/changelog/components/changelog-list/changelog-list";
 import { allChangelogs } from "content-collections";
+import { PageContainer } from "@/components/page-container";
 
 export default function Page() {
   return (
-    <div className="mx-auto max-w-2xl">
+    <PageContainer>
       <header className="space-y-1">
         <h1 className="text-gray-12 max-w-3xl text-lg font-semibold text-balance">
           What&apos;s new
@@ -19,6 +20,6 @@ export default function Page() {
       <div className="mt-20">
         <ChangelogList changelogs={allChangelogs} />
       </div>
-    </div>
+    </PageContainer>
   );
 }

@@ -12,7 +12,7 @@ export function ChangelogDetail({ changelog }: ChangelogDetailProps) {
   const formattedDate = formatDate(published);
 
   return (
-    <div className="mx-auto max-w-2xl">
+    <article>
       <header className="space-y-1">
         <h1 className="text-gray-12 max-w-3xl text-lg font-semibold text-balance">
           {title}
@@ -28,6 +28,6 @@ export function ChangelogDetail({ changelog }: ChangelogDetailProps) {
           <MDXContent components={mdxComponents} code={mdx} />
         </div>
       </div>
-    </div>
+    </article>
   );
 }

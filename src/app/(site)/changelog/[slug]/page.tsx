@@ -4,6 +4,7 @@ import { ChangelogDetail } from "@/features/changelog/components/changelog-detai
 import { getChangelogs } from "@/features/changelog/queries/get-changelogs";
 import { getChangelog } from "@/features/changelog/queries/get-changelog";
 import { siteConfig } from "@/config/site";
+import { PageContainer } from "@/components/page-container";
 
 export async function generateStaticParams() {
   return getChangelogs().map((changelog) => ({
@@ -48,5 +49,9 @@ export default async function ChangelogPage({ params }: ChangelogPageProps) {
     return notFound();
   }
 
-  return <ChangelogDetail changelog={changelog} />;
+  return (
+    <PageContainer size="sm">
+      <ChangelogDetail changelog={changelog} />
+    </PageContainer>
+  );
 }

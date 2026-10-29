@@ -2,7 +2,7 @@ import { cn } from "@/lib/cn";
 import { ReactNode } from "react";
 
 const sizes = {
-  sm: "max-w-xl",
+  sm: "max-w-2xl",
   md: "max-w-3xl",
   lg: "max-w-5xl",
   full: "max-w-none",

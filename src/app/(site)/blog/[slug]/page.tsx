@@ -4,6 +4,7 @@ import { PostDetail } from "@/features/blog/components/post-detail/post-detail";
 import { getPosts } from "@/features/blog/queries/get-posts";
 import { getPost } from "@/features/blog/queries/get-post";
 import { siteConfig } from "@/config/site";
+import { PageContainer } from "@/components/page-container";
 
 export async function generateStaticParams() {
   return getPosts().map((post) => ({
@@ -48,5 +49,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     return notFound();
   }
 
-  return <PostDetail post={post} />;
+  return (
+    <PageContainer size="sm">
+      <PostDetail post={post} />
+    </PageContainer>
+  );
 }
