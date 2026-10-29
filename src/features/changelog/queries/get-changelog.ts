@@ -1,4 +1,4 @@
-import { allChangelogs } from "content-collections";
+import { getChangelogs } from "@/features/changelog/queries/get-changelogs";
 
 export const getChangelog = (slug: string) =>
-  allChangelogs.find((changelog) => changelog._meta.path === slug);
+  getChangelogs().find((changelog) => changelog._meta.path === slug);

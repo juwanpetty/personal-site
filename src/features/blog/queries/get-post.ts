@@ -1,4 +1,4 @@
-import { allPosts } from "content-collections";
+import { getPosts } from "@/features/blog/queries/get-posts";
 
 export const getPost = (slug: string) =>
-  allPosts.find((post) => post._meta.path === slug);
+  getPosts().find((post) => post._meta.path === slug);
