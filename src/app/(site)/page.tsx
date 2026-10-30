@@ -1,11 +1,13 @@
 import { PostList } from "@/features/blog/components/post-list/post-list";
-import { allPosts } from "content-collections";
 import { PageContainer } from "@/components/page-container";
+import { getPosts } from "@/features/blog/queries/get-posts";
 
 export default function HomePage() {
+  const posts = getPosts().slice(0, 3);
+
   return (
     <PageContainer>
-      <PostList posts={allPosts} />
+      <PostList posts={posts} />
     </PageContainer>
   );
 }

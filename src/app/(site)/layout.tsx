@@ -1,3 +1,4 @@
+import { Footer } from "@/components/footer";
 import { SiteHeader } from "@/components/site-header";
 
 export default function SiteLayout({
@@ -9,6 +10,7 @@ export default function SiteLayout({
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
       <div className="flex-1">{children}</div>
+      <Footer />
     </div>
   );
 }

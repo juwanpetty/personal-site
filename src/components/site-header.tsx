@@ -34,11 +34,7 @@ export function SiteHeader() {
       <div className="hidden shrink-0 xl:block"></div>
 
       {/* Right section */}
-      <div className="flex min-w-0 flex-1 items-center justify-end gap-2">
-        <button className="bg-gray-12 flex h-8 items-center rounded-full px-3.5 text-sm font-medium text-white">
-          <span>Subscribe</span>
-        </button>
-      </div>
+      <div className="flex min-w-0 flex-1 items-center justify-end gap-2"></div>
     </div>
   );
 }

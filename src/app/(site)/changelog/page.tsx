@@ -1,8 +1,10 @@
 import { ChangelogList } from "@/features/changelog/components/changelog-list/changelog-list";
-import { allChangelogs } from "content-collections";
 import { PageContainer } from "@/components/page-container";
+import { getChangelogs } from "@/features/changelog/queries/get-changelogs";
 
 export default function Page() {
+  const changelogs = getChangelogs();
+
   return (
     <PageContainer>
       <header className="space-y-1">
@@ -18,7 +20,7 @@ export default function Page() {
       </header>
 
       <div className="mt-20">
-        <ChangelogList changelogs={allChangelogs} />
+        <ChangelogList changelogs={changelogs} />
       </div>
     </PageContainer>
   );
